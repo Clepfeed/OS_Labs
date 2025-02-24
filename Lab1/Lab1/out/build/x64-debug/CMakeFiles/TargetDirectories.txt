@@ -1,0 +1,8 @@
+D:/Code/OS/Lab1/Lab1/out/build/x64-debug/CMakeFiles/Main.dir
+D:/Code/OS/Lab1/Lab1/out/build/x64-debug/CMakeFiles/Creator.dir
+D:/Code/OS/Lab1/Lab1/out/build/x64-debug/CMakeFiles/Reporter.dir
+D:/Code/OS/Lab1/Lab1/out/build/x64-debug/CMakeFiles/edit_cache.dir
+D:/Code/OS/Lab1/Lab1/out/build/x64-debug/CMakeFiles/rebuild_cache.dir
+D:/Code/OS/Lab1/Lab1/out/build/x64-debug/Lab1/CMakeFiles/Lab1.dir
+D:/Code/OS/Lab1/Lab1/out/build/x64-debug/Lab1/CMakeFiles/edit_cache.dir
+D:/Code/OS/Lab1/Lab1/out/build/x64-debug/Lab1/CMakeFiles/rebuild_cache.dir
