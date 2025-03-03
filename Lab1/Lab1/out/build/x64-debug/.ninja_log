@@ -1,9 +1,0 @@
-# ninja log v5
-7	1128	7621280822726372	CMakeFiles/Reporter.dir/src/reporter/reporter.cpp.obj	d80463f6f30dd1f7
-11	1218	7621280823627871	Lab1/CMakeFiles/Lab1.dir/Lab1.cpp.obj	efd6491cc6a27572
-2	1387	7621280825284596	CMakeFiles/Creator.dir/src/creator/creator.cpp.obj	6667dd1426ce0da2
-1130	1589	7621280827004180	bin/Reporter.exe	42fdce812584499d
-1219	1647	7621280827672272	bin/Lab1.exe	55007ee8109ad6b6
-1388	1782	7621280829055363	bin/Creator.exe	bc6934b7dccbbf1c
-1782	2663	7621280838095082	CMakeFiles/Main.dir/src/main/main.cpp.obj	a002f94fe1412958
-2663	3187	7621280841450867	bin/Main.exe	37ebf1ae5e2b8fb9

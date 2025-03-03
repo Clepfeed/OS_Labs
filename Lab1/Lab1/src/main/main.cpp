@@ -40,7 +40,6 @@ int main() {
     std::cout << "Enter number of records: ";
     std::cin >> record_count;
 
-    // Launch Creator
     std::string creator_cmd = "Creator.exe " + binary_filename + " " +
         std::to_string(record_count);
     STARTUPINFO si = { sizeof(STARTUPINFO) };
@@ -66,8 +65,7 @@ int main() {
     std::cin >> report_filename;
     std::cout << "Enter hourly rate: ";
     std::cin >> hourly_rate;
-
-    // Launch Reporter
+    
     std::string reporter_cmd = "Reporter.exe " + binary_filename + " " +
         report_filename + " " + std::to_string(hourly_rate);
 

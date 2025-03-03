@@ -1,4 +1,4 @@
-# Install script for directory: D:/C++/BSU/OS/OS_Labs/Lab1/Lab1
+# Install script for directory: D:/C++/BSU/OS/OS_Labs/Lab1/Lab1/out/build/x64-debug/_deps/googletest-src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,17 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("D:/C++/BSU/OS/OS_Labs/Lab1/Lab1/out/build/x64-debug/_deps/googletest-build/cmake_install.cmake")
+  include("D:/C++/BSU/OS/OS_Labs/Lab1/Lab1/out/build/x64-debug/_deps/googletest-build/googlemock/cmake_install.cmake")
 
 endif()
 
-if(CMAKE_INSTALL_COMPONENT)
-  set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
-else()
-  set(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
-endif()
-
-string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
-       "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/C++/BSU/OS/OS_Labs/Lab1/Lab1/out/build/x64-debug/${CMAKE_INSTALL_MANIFEST}"
-     "${CMAKE_INSTALL_MANIFEST_CONTENT}")
