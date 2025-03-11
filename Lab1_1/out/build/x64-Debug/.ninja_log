@@ -1,13 +1,7 @@
 # ninja log v5
-0	785	7633375559017303	CMakeFiles/creator.dir/src/creator/creator.cpp.obj	5931d62d4d26e465
-9	792	7633375559036966	CMakeFiles/main.dir/src/main/main.cpp.obj	cc6dbbd328f4a463
-787	1076	7633375561839463	bin/creator.exe	c0d6154969e83c23
-792	1076	7633375561839463	bin/main.exe	91086ed994ec8a0
-2	631	7633375945117567	CMakeFiles/main.dir/src/main/main.cpp.obj	cc6dbbd328f4a463
-631	782	7633375946284441	bin/main.exe	91086ed994ec8a0
-2	640	7633378347441144	CMakeFiles/main.dir/src/main/main.cpp.obj	cc6dbbd328f4a463
-640	798	7633378348672911	bin/main.exe	91086ed994ec8a0
-2	604	7633378819313003	CMakeFiles/main.dir/src/main/main.cpp.obj	cc6dbbd328f4a463
-604	753	7633378820473730	bin/main.exe	91086ed994ec8a0
-2	622	7633380175698077	CMakeFiles/main.dir/src/main/main.cpp.obj	cc6dbbd328f4a463
-628	779	7633380176925086	bin/main.exe	91086ed994ec8a0
+6	1067	7633853964092686	CMakeFiles/main.dir/src/main/main.cpp.obj	6fa1a1054a62ddd1
+27	1608	7633852270977098	CMakeFiles/creator.dir/src/creator/creator.cpp.obj	ac9633d410561e65
+1636	1917	7633852273513023	bin/reporter.exe	a5d1fc51d22cce62
+1068	1316	7633853966174405	bin/main.exe	a566648a73782684
+1609	1826	7633852272563247	bin/creator.exe	9b6da6b72e9b3206
+31	1636	7633852271154069	CMakeFiles/reporter.dir/src/reporter/reporter.cpp.obj	e7fae3c468866255

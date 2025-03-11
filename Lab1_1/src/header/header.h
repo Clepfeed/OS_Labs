@@ -3,8 +3,10 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <iomanip>
 #include <vector>
-#include <Windows.h>
+#include <algorithm>
+#include <Windows.h>    
 
 struct employee {
     int num;

@@ -1,4 +1,5 @@
-D:/C++/BSU/OS/OS_Labs/Lab1_1/out/build/x64-Debug/CMakeFiles/creator.dir
-D:/C++/BSU/OS/OS_Labs/Lab1_1/out/build/x64-Debug/CMakeFiles/edit_cache.dir
-D:/C++/BSU/OS/OS_Labs/Lab1_1/out/build/x64-Debug/CMakeFiles/main.dir
-D:/C++/BSU/OS/OS_Labs/Lab1_1/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
+D:/Code/OS/Lab1_1/out/build/x64-Debug/CMakeFiles/creator.dir
+D:/Code/OS/Lab1_1/out/build/x64-Debug/CMakeFiles/reporter.dir
+D:/Code/OS/Lab1_1/out/build/x64-Debug/CMakeFiles/main.dir
+D:/Code/OS/Lab1_1/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+D:/Code/OS/Lab1_1/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
