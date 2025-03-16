@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GtaTestDurations xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Executable>D:\C++\BSU\OS\OS_Labs\Lab1_1\out\build\x64-Debug\main_test.exe</Executable>
+  <TestDurations>
+    <TestDuration Test="MainTest.DisplayBinaryFileNonexistent" Duration="1" />
+    <TestDuration Test="MainTest.DisplayBinaryFileValid" Duration="6" />
+    <TestDuration Test="MainTest.DisplayTextFileNonexistent" Duration="1" />
+    <TestDuration Test="MainTest.DisplayTextFileValid" Duration="7" />
+    <TestDuration Test="MainTest.StartProcessInvalid" Duration="1" />
+    <TestDuration Test="MainTest.StartProcessValid" Duration="13" />
+  </TestDurations>
+</GtaTestDurations>

@@ -1,129 +1,115 @@
-// main.cpp
+#include "main.h"
 
-#include "../header/header.h"
+void displayBinaryFile(const std::string& filename, std::ostream& output) {
+    std::ifstream file(filename, std::ios::binary);
+    if (!file) {
+        output << "Error: Cannot open file " << filename << " for reading\n";
+        return;
+    }
 
-using namespace std;
+    employee emp;
+    int counter = 0;
 
-void displayBinaryFile(const string& filename) 
-{
-	ifstream file(filename, ios::binary);
-	if (!file) 
-	{
-		cerr << "Error: Cannot open file " << filename << " for reading\n";
-		return;
-	}
+    output << "\nContents of binary file " << filename << ":\n";
+    output << "ID|Name|Hours\n";
+    output << "------------------------\n";
 
-	employee emp;
-	int counter = 0;
+    while (file.read(reinterpret_cast<char*>(&emp), sizeof(employee))) {
+        output << emp.num << "|" << emp.name << "|" << emp.hours << "\n";
+        counter++;
+    }
 
-	cout << "\nContents of binary file " << filename << ":\n";
-	cout << "ID|Name|Hours\n";
-	cout << "------------------------\n";
-
-	while (file.read(reinterpret_cast<char*>(&emp), sizeof(employee))) 
-	{
-		cout << emp.num << "|" << emp.name << "|" << emp.hours << "\n";
-		counter++;
-	}
-
-	file.close();
-	cout << "Total records: " << counter << "\n\n";
+    file.close();
+    output << "Total records: " << counter << "\n\n";
 }
 
-void displayTextFile(const string& filename) 
-{
-	ifstream file(filename);
-	if (!file) 
-	{
-		cerr << "Error: Cannot open file " << filename << " for reading\n";
-		return;
-	}
+void displayTextFile(const std::string& filename, std::ostream& output) {
+    std::ifstream file(filename);
+    if (!file) {
+        output << "Error: Cannot open file " << filename << " for reading\n";
+        return;
+    }
 
-	cout << "\nContents of report file " << filename << ":\n";
-	cout << "------------------------\n";
+    output << "\nContents of report file " << filename << ":\n";
+    output << "------------------------\n";
 
-	string line;
-	while (getline(file, line)) 
-	{
-		cout << line << "\n";
-	}
+    std::string line;
+    while (getline(file, line)) {
+        output << line << "\n";
+    }
 
-	file.close();
-	cout << "\n";
+    file.close();
+    output << "\n";
 }
 
-bool startProcess(const string& commandLine)
-{
-	STARTUPINFO si;
-	PROCESS_INFORMATION pi;
+bool startProcess(const std::string& commandLine) {
+    STARTUPINFO si;
+    PROCESS_INFORMATION pi;
 
-	ZeroMemory(&si, sizeof(si));
-	si.cb = sizeof(si);
-	ZeroMemory(&pi, sizeof(pi));
+    ZeroMemory(&si, sizeof(si));
+    si.cb = sizeof(si);
+    ZeroMemory(&pi, sizeof(pi));
 
-	char* cmdLine = _strdup(commandLine.c_str());
+    char* cmdLine = _strdup(commandLine.c_str());
 
-	if (!CreateProcess(NULL, cmdLine, NULL, NULL,
-		FALSE, 0, NULL, NULL, &si, &pi))
-	{
-		cerr << "CreateProcess failed: " << GetLastError() << endl;
-		free(cmdLine);
-		return false;
-	}
+    if (!CreateProcess(NULL, cmdLine, NULL, NULL,
+        FALSE, 0, NULL, NULL, &si, &pi)) {
+        std::cerr << "CreateProcess failed: " << GetLastError() << std::endl;
+        free(cmdLine);
+        return false;
+    }
 
-	free(cmdLine);
+    free(cmdLine);
 
-	WaitForSingleObject(pi.hProcess, INFINITE);
+    WaitForSingleObject(pi.hProcess, INFINITE);
 
-	DWORD exitCode;
-	GetExitCodeProcess(pi.hProcess, &exitCode);
+    DWORD exitCode;
+    GetExitCodeProcess(pi.hProcess, &exitCode);
 
-	CloseHandle(pi.hProcess);
-	CloseHandle(pi.hThread);
+    CloseHandle(pi.hProcess);
+    CloseHandle(pi.hThread);
 
-	return (exitCode == 0);
+    return (exitCode == 0);
 }
 
-int main()
-{
-	string creatorName = "creator.exe";
-	string reporterName = "reporter.exe";
-	string creatorFileName = "";
-	string reporterFileName = "";
-	string recordCount = "";
-	string salaryPerHour = "";
-	
-	cout << "Type data for creator:\n"
-		 << "filename: ";
-	cin >> creatorFileName;
-	cout << "records count: ";
-	cin >> recordCount;
+#ifndef TESTING
+int main() {
+    std::string creatorName = "creator.exe";
+    std::string reporterName = "reporter.exe";
+    std::string creatorFileName = "";
+    std::string reporterFileName = "";
+    std::string recordCount = "";
+    std::string salaryPerHour = "";
 
-	creatorName += " " + creatorFileName + " " + recordCount;
+    std::cout << "Type data for creator:\n"
+        << "filename: ";
+    std::cin >> creatorFileName;
+    std::cout << "records count: ";
+    std::cin >> recordCount;
 
-	if (!startProcess(creatorName))
-	{
-		cerr << "Creator utility failed\n";
-		return 1;
-	}
+    creatorName += " " + creatorFileName + " " + recordCount;
 
-	displayBinaryFile(creatorFileName);
+    if (!startProcess(creatorName)) {
+        std::cerr << "Creator utility failed\n";
+        return 1;
+    }
 
-	cout << "Type data for reporter:\n"
-		<< "reporter filename: ";
-	cin >> reporterFileName;
-	cout << "salary per hour: ";
-	cin >> salaryPerHour;
+    displayBinaryFile(creatorFileName);
 
-	reporterName += " " + creatorFileName + " " + reporterFileName + ".txt " + salaryPerHour;
+    std::cout << "Type data for reporter:\n" << "reporter filename: ";
+    std::cin >> reporterFileName;
+    std::cout << "salary per hour: ";
+    std::cin >> salaryPerHour;
 
-	if (!startProcess(reporterName))
-	{
-		cerr << "Creator utility failed\n";
-		return 1;
-	}
+    reporterName += " " + creatorFileName + " " + reporterFileName + ".txt " + salaryPerHour;
 
-	displayTextFile(reporterFileName);
+    if (!startProcess(reporterName)) {
+        std::cerr << "Reporter utility failed\n";
+        return 1;
+    }
 
-	return 0;
+    displayTextFile(reporterFileName + ".txt");
+
+    return 0;
 }
+#endif

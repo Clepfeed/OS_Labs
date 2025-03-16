@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GtaTestDurations xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Executable>D:\C++\BSU\OS\OS_Labs\Lab1_1\out\build\x64-Debug\creator_test.exe</Executable>
+  <TestDurations>
+    <TestDuration Test="CreatorTest.CheckFileSize" Duration="1" />
+    <TestDuration Test="CreatorTest.CreateFileWithPredefinedData" Duration="1" />
+    <TestDuration Test="CreatorTest.InvalidFilePath" Duration="1" />
+    <TestDuration Test="CreatorTest.MaxRecordCount" Duration="1" />
+    <TestDuration Test="CreatorTest.NegativeRecordCount" Duration="1" />
+    <TestDuration Test="CreatorTest.ZeroRecordCount" Duration="1" />
+  </TestDurations>
+</GtaTestDurations>

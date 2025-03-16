@@ -1,0 +1,5 @@
+if(EXISTS "D:/C++/BSU/OS/OS_Labs/Lab1_1/out/build/x64-Debug/main_test[1]_tests.cmake")
+  include("D:/C++/BSU/OS/OS_Labs/Lab1_1/out/build/x64-Debug/main_test[1]_tests.cmake")
+else()
+  add_test(main_test_NOT_BUILT main_test_NOT_BUILT)
+endif()
