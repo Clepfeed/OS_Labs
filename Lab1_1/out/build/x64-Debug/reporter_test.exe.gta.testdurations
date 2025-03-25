@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GtaTestDurations xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Executable>D:\C++\BSU\OS\OS_Labs\Lab1_1\out\build\x64-Debug\reporter_test.exe</Executable>
+  <Executable>D:\Code\OS\Lab1_1\out\build\x64-Debug\reporter_test.exe</Executable>
   <TestDurations>
+    <TestDuration Test="ReporterTest.ReadEmptyFile" Duration="1" />
+    <TestDuration Test="ReporterTest.ReadValidFile" Duration="3" />
     <TestDuration Test="ReporterTest.GenerateReportNegativeRate" Duration="1" />
     <TestDuration Test="ReporterTest.GenerateReportZeroRate" Duration="1" />
-    <TestDuration Test="ReporterTest.GenerateValidReport" Duration="7" />
-    <TestDuration Test="ReporterTest.ReadEmptyFile" Duration="1" />
-    <TestDuration Test="ReporterTest.ReadValidFile" Duration="1" />
+    <TestDuration Test="ReporterTest.GenerateValidReport" Duration="11" />
   </TestDurations>
 </GtaTestDurations>

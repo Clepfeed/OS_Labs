@@ -1,16 +1,21 @@
-#ifndef MAIN_H
-#define MAIN_H
-
+#pragma once
 #include <iostream>
-#include <windows.h>
 #include <vector>
+#include <windows.h>
 
-using namespace std;
-
-struct Avg
+struct Avg 
 {
-	vector<int> vec;
-	int avg;
+    std::vector<int> vec;
+    int avg;
 };
 
-#endif // THREAD_FUNCS_H
+struct MinMax 
+{
+    std::vector<int> vec;
+    int min;
+    int max;
+};
+
+void printVec(std::vector<int>& vec);
+DWORD WINAPI average(LPVOID data);
+DWORD WINAPI min_max(LPVOID data);

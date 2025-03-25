@@ -1,5 +1,5 @@
-libdir=D:/C++/BSU/OS/OS_Labs/Lab1_1/out/install/x64-Debug/lib
-includedir=D:/C++/BSU/OS/OS_Labs/Lab1_1/out/install/x64-Debug/include
+libdir=D:/Code/OS/Lab1_1/out/install/x64-Debug/lib
+includedir=D:/Code/OS/Lab1_1/out/install/x64-Debug/include
 
 Name: gtest
 Description: GoogleTest (without main() function)

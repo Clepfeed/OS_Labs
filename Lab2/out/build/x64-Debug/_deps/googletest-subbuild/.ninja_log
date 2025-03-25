@@ -1,0 +1,21 @@
+# ninja log v5
+7857	7919	7639967803242833	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	1254caf3354fb9de
+4	85	7639827428275579	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	eabf5efc8feff469
+7670	7731	7639967801337856	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	9f3f3572ce8acbb9
+4	85	7639827428275579	D:/Code/OS/Lab2/out/build/x64-Debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	eabf5efc8feff469
+7670	7731	7639967801337856	D:/Code/OS/Lab2/out/build/x64-Debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	9f3f3572ce8acbb9
+4	7670	7639967800696358	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	ff922ffa1aeca70d
+4	7670	7639967800696358	D:/Code/OS/Lab2/out/build/x64-Debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	ff922ffa1aeca70d
+7731	7791	7639967801979213	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	2a272401b1938c8c
+7731	7791	7639967801979213	D:/Code/OS/Lab2/out/build/x64-Debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	2a272401b1938c8c
+8039	8125	7639967805305603	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	e8fd97abbed481a
+7791	7857	7639967802609470	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	3755a39dc2ec0abb
+8039	8125	7639967805305603	CMakeFiles/googletest-populate-complete	e8fd97abbed481a
+7791	7857	7639967802609470	D:/Code/OS/Lab2/out/build/x64-Debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	3755a39dc2ec0abb
+7857	7919	7639967803242833	D:/Code/OS/Lab2/out/build/x64-Debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	1254caf3354fb9de
+7919	7979	7639967803717690	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	96ca1958ba1a4d5b
+7919	7979	7639967803717690	D:/Code/OS/Lab2/out/build/x64-Debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	96ca1958ba1a4d5b
+7979	8039	7639967804454506	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	439d66ededc1af24
+7979	8039	7639967804454506	D:/Code/OS/Lab2/out/build/x64-Debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	439d66ededc1af24
+8039	8125	7639967805305603	D:/Code/OS/Lab2/out/build/x64-Debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete	e8fd97abbed481a
+8039	8125	7639967805305603	D:/Code/OS/Lab2/out/build/x64-Debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	e8fd97abbed481a

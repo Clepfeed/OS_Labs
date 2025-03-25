@@ -1,3 +1,3 @@
-D:/C++/BSU/OS/OS_Labs/Lab1_1/out/build/x64-Debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir
-D:/C++/BSU/OS/OS_Labs/Lab1_1/out/build/x64-Debug/_deps/googletest-subbuild/CMakeFiles/edit_cache.dir
-D:/C++/BSU/OS/OS_Labs/Lab1_1/out/build/x64-Debug/_deps/googletest-subbuild/CMakeFiles/rebuild_cache.dir
+D:/Code/OS/Lab1_1/out/build/x64-Debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir
+D:/Code/OS/Lab1_1/out/build/x64-Debug/_deps/googletest-subbuild/CMakeFiles/edit_cache.dir
+D:/Code/OS/Lab1_1/out/build/x64-Debug/_deps/googletest-subbuild/CMakeFiles/rebuild_cache.dir

@@ -1,8 +1,8 @@
-# Install script for directory: D:/C++/BSU/OS/OS_Labs/Lab1_1
+# Install script for directory: D:/Code/OS/Lab1_1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "D:/C++/BSU/OS/OS_Labs/Lab1_1/out/install/x64-Debug")
+  set(CMAKE_INSTALL_PREFIX "D:/Code/OS/Lab1_1/out/install/x64-Debug")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("D:/C++/BSU/OS/OS_Labs/Lab1_1/out/build/x64-Debug/_deps/googletest-build/cmake_install.cmake")
+  include("D:/Code/OS/Lab1_1/out/build/x64-Debug/_deps/googletest-build/cmake_install.cmake")
 
 endif()
 
@@ -46,5 +46,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/C++/BSU/OS/OS_Labs/Lab1_1/out/build/x64-Debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/Code/OS/Lab1_1/out/build/x64-Debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
