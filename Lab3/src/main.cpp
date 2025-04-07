@@ -13,11 +13,7 @@ DWORD WINAPI mark(LPVOID DATA)
 {
 	Mark* data = (Mark*)DATA;
 	
-	data->vec[(data->ind)] = data->ind;
-	while (true)
-	{
-		cout << data->ind;
-	}
+	
 	return 0;
 }
 
