@@ -1,0 +1,22 @@
+# ninja log v5
+54	4017	7694246877448268	Lab4/CMakeFiles/process_sync_tests.dir/tests/test_sync.cpp.obj	f4d175267bca51e1
+38	56	0	clean	8c45b54705a541e8
+83	2264	7694741196835646	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj	6598936b9d16ec1a
+55	4372	7694741217838891	_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.obj	ed21af0efc3a1dc6
+2289	2770	7694741200120993	Lab4/receiver.exe	b08b5bd302f97399
+31	2276	7694741196935603	Lab4/CMakeFiles/sender.dir/src/sender.cpp.obj	ce74b8fe9de702
+31	2604	7694246862378764	Lab4/CMakeFiles/utils.dir/src/utils.cpp.obj	171941f72bd8df0d
+25	2289	7694741197035644	Lab4/CMakeFiles/receiver.dir/src/receiver.cpp.obj	5e98b53d083d6fda
+2604	2820	7694246865293349	Lab4/utils.lib	60fa1dd41e585f4b
+69	2287	7694741196945628	_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj	934c46a826f1a58d
+2276	2779	7694741200290969	Lab4/sender.exe	3a524004859323d
+48	4004	7694246877309919	Lab4/CMakeFiles/process_sync_tests.dir/tests/test_message.cpp.obj	6ba35a6bb6967e75
+48	3165	7694741205877406	_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj	e8de62861aacef88
+61	3132	7694741205512055	_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.obj	3f90565126a711f5
+43	4170	7694741215887872	_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.obj	125ca8103ba414d4
+4170	4297	7694741217073434	lib/gmock.lib	63beb969954672d
+4372	4494	7694741219076467	lib/gmock_main.lib	aa52f6acf8e52c9b
+75	4243	7694741216607866	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj	ab17a4ddbdcba82e
+4243	4344	7694741217593358	lib/gtest.lib	fbe074513b51b
+4344	4408	7694741218325133	lib/gtest_main.lib	47f5d7d34947b21d
+37	3138	7694741205592128	Lab4/CMakeFiles/process_sync_tests.dir/tests/tests.cpp.obj	c77ec9880b6857c7

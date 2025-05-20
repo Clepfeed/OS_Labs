@@ -1,0 +1,5 @@
+if(EXISTS "D:/Code/OS/Lab4/out/build/x64-debug/Lab4/process_sync_tests[1]_tests.cmake")
+  include("D:/Code/OS/Lab4/out/build/x64-debug/Lab4/process_sync_tests[1]_tests.cmake")
+else()
+  add_test(process_sync_tests_NOT_BUILT process_sync_tests_NOT_BUILT)
+endif()
