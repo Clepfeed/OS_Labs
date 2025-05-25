@@ -1,4 +1,5 @@
 #include "../include/header.h"
+#include "../include/message_utils.h"
 #include <fstream>
 
 int main(int argc, char* argv[]) {
@@ -51,60 +52,11 @@ int main(int argc, char* argv[]) {
                 std::cout << "Message truncated to " << MAX_MESSAGE_LENGTH << " characters." << std::endl;
             }
 
-            // Ждем доступный слот
-            if (WaitForSingleObject(emptySlotsSemaphore, INFINITE) != WAIT_OBJECT_0) {
-                std::cerr << "Failed to wait for empty slot." << std::endl;
-                continue;
-            }
-
-            // Захватываем мьютекс
-            WaitForSingleObject(fileMutex, INFINITE);
-
-            std::fstream file(fileName, std::ios::binary | std::ios::in | std::ios::out);
-            if (!file) {
-                std::cerr << "Failed to open message file." << std::endl;
-                ReleaseMutex(fileMutex);
-                ReleaseSemaphore(emptySlotsSemaphore, 1, NULL);
-                continue;
-            }
-
-            // Определяем размер файла и количество сообщений
-            file.seekg(0, std::ios::end);
-            int fileSize = file.tellg();
-            int messageCount = fileSize / sizeof(Message);
-
-            // Ищем пустой слот
-            Message message;
-            bool slotFound = false;
-
-            for (int i = 0; i < messageCount; ++i) {
-                file.seekg(i * sizeof(Message));
-                file.read(reinterpret_cast<char*>(&message), sizeof(Message));
-
-                if (message.isEmpty) {
-                    // Нашли пустой слот, записываем сообщение
-                    memset(&message, 0, sizeof(Message)); // Очищаем структуру
-                    strncpy_s(message.text, messageText.c_str(), MAX_MESSAGE_LENGTH);
-                    message.isEmpty = false;
-
-                    file.seekp(i * sizeof(Message));
-                    file.write(reinterpret_cast<char*>(&message), sizeof(Message));
-
-                    slotFound = true;
-                    break;
-                }
-            }
-
-            file.close();
-            ReleaseMutex(fileMutex);
-
-            if (slotFound) {
-                ReleaseSemaphore(filledSlotsSemaphore, 1, NULL);
+            if (message_utils::WriteMessageToFile(fileName, messageText)) {
                 std::cout << "Message sent successfully." << std::endl;
             }
             else {
-                ReleaseSemaphore(emptySlotsSemaphore, 1, NULL);
-                std::cout << "No empty slots found." << std::endl;
+                std::cout << "Failed to send message." << std::endl;
             }
             break;
         }

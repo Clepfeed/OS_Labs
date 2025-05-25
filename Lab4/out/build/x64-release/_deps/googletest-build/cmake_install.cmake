@@ -1,8 +1,8 @@
-# Install script for directory: D:/Code/OS/Lab4/out/build/x64-release/_deps/googletest-src
+# Install script for directory: D:/C++/BSU/OS/OS_Labs/Lab4/out/build/x64-release/_deps/googletest-src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "D:/Code/OS/Lab4/out/install/x64-release")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Lab4")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("D:/Code/OS/Lab4/out/build/x64-release/_deps/googletest-build/googlemock/cmake_install.cmake")
+  include("D:/C++/BSU/OS/OS_Labs/Lab4/out/build/x64-release/_deps/googletest-build/googlemock/cmake_install.cmake")
 
 endif()
 

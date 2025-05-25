@@ -1,5 +1,5 @@
-libdir=D:/Code/OS/Lab2/out/install/x64-Debug/lib
-includedir=D:/Code/OS/Lab2/out/install/x64-Debug/include
+libdir=D:/C++/BSU/OS/OS_Labs/Lab2/out/install/x64-Debug/lib
+includedir=D:/C++/BSU/OS/OS_Labs/Lab2/out/install/x64-Debug/include
 
 Name: gmock_main
 Description: GoogleMock (with main() function)

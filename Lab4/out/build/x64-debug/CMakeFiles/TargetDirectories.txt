@@ -1,6 +1,6 @@
-D:/Code/OS/Lab4/out/build/x64-debug/CMakeFiles/edit_cache.dir
-D:/Code/OS/Lab4/out/build/x64-debug/CMakeFiles/rebuild_cache.dir
-D:/Code/OS/Lab4/out/build/x64-debug/Lab4/CMakeFiles/receiver.dir
-D:/Code/OS/Lab4/out/build/x64-debug/Lab4/CMakeFiles/sender.dir
-D:/Code/OS/Lab4/out/build/x64-debug/Lab4/CMakeFiles/edit_cache.dir
-D:/Code/OS/Lab4/out/build/x64-debug/Lab4/CMakeFiles/rebuild_cache.dir
+D:/C++/BSU/OS/OS_Labs/Lab4/out/build/x64-debug/CMakeFiles/edit_cache.dir
+D:/C++/BSU/OS/OS_Labs/Lab4/out/build/x64-debug/CMakeFiles/rebuild_cache.dir
+D:/C++/BSU/OS/OS_Labs/Lab4/out/build/x64-debug/Lab4/CMakeFiles/edit_cache.dir
+D:/C++/BSU/OS/OS_Labs/Lab4/out/build/x64-debug/Lab4/CMakeFiles/receiver.dir
+D:/C++/BSU/OS/OS_Labs/Lab4/out/build/x64-debug/Lab4/CMakeFiles/sender.dir
+D:/C++/BSU/OS/OS_Labs/Lab4/out/build/x64-debug/Lab4/CMakeFiles/rebuild_cache.dir

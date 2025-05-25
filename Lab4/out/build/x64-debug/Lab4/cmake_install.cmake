@@ -1,8 +1,8 @@
-# Install script for directory: D:/Code/OS/Lab4/Lab4
+# Install script for directory: D:/C++/BSU/OS/OS_Labs/Lab4/Lab4
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "D:/Code/OS/Lab4/out/install/x64-debug")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Lab4")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

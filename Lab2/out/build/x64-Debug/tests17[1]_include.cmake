@@ -1,5 +1,5 @@
-if(EXISTS "D:/Code/OS/Lab2/out/build/x64-Debug/tests17[1]_tests.cmake")
-  include("D:/Code/OS/Lab2/out/build/x64-Debug/tests17[1]_tests.cmake")
+if(EXISTS "D:/C++/BSU/OS/OS_Labs/Lab2/out/build/x64-Debug/tests17[1]_tests.cmake")
+  include("D:/C++/BSU/OS/OS_Labs/Lab2/out/build/x64-Debug/tests17[1]_tests.cmake")
 else()
   add_test(tests17_NOT_BUILT tests17_NOT_BUILT)
 endif()

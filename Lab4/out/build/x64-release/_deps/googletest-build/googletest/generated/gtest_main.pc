@@ -1,5 +1,5 @@
-libdir=D:/Code/OS/Lab4/out/install/x64-release/lib
-includedir=D:/Code/OS/Lab4/out/install/x64-release/include
+libdir=C:/Program Files (x86)/Lab4/lib
+includedir=C:/Program Files (x86)/Lab4/include
 
 Name: gtest_main
 Description: GoogleTest (with main() function)
