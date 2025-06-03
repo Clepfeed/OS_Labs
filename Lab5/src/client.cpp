@@ -3,7 +3,6 @@
 #include <string>
 #include "../include/common.h"
 
-// Функция для соединения с сервером
 HANDLE connectToServer() {
     HANDLE hPipe;
 
@@ -19,25 +18,21 @@ HANDLE connectToServer() {
             0,                      // атрибуты и флаги
             NULL);                  // шаблон файла
 
-        // Проверяем успешность подключения
         if (hPipe != INVALID_HANDLE_VALUE) {
             break;
         }
 
-        // Если сервер занят, ждем и пробуем снова
         if (GetLastError() != ERROR_PIPE_BUSY) {
             std::cerr << "Ошибка подключения к серверу: " << GetLastError() << std::endl;
             return INVALID_HANDLE_VALUE;
         }
 
-        // Ждем до 5 секунд
         if (!WaitNamedPipe(PIPE_NAME.c_str(), 5000)) {
             std::cerr << "Таймаут ожидания канала\n";
             return INVALID_HANDLE_VALUE;
         }
     }
 
-    // Устанавливаем режим чтения сообщений
     DWORD dwMode = PIPE_READMODE_MESSAGE;
     if (!SetNamedPipeHandleState(hPipe, &dwMode, NULL, NULL)) {
         std::cerr << "Ошибка установки режима канала\n";
@@ -48,7 +43,6 @@ HANDLE connectToServer() {
     return hPipe;
 }
 
-// Функция для отображения записи сотрудника
 void displayEmployee(const Employee& emp) {
     std::cout << "ID: " << emp.num << "\n";
     std::cout << "Имя: " << emp.name << "\n";

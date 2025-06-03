@@ -1,4 +1,4 @@
-D:/C++/BSU/OS/OS_Labs/Lab5/out/build/x64-Debug/CMakeFiles/Server.dir
-D:/C++/BSU/OS/OS_Labs/Lab5/out/build/x64-Debug/CMakeFiles/Client.dir
-D:/C++/BSU/OS/OS_Labs/Lab5/out/build/x64-Debug/CMakeFiles/edit_cache.dir
-D:/C++/BSU/OS/OS_Labs/Lab5/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
+D:/Code/OS/Lab5/out/build/x64-Debug/CMakeFiles/Server.dir
+D:/Code/OS/Lab5/out/build/x64-Debug/CMakeFiles/Client.dir
+D:/Code/OS/Lab5/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+D:/Code/OS/Lab5/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

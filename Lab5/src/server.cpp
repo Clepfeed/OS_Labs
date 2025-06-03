@@ -92,7 +92,6 @@ void handleClientRequest(HANDLE hPipe) {
     bool connected = true;
 
     while (connected) {
-        // Чтение запроса от клиента
         if (!ReadFile(hPipe, &request, sizeof(Request), &bytesRead, NULL) || bytesRead == 0) {
             break;
         }
@@ -118,10 +117,8 @@ void handleClientRequest(HANDLE hPipe) {
                 break;
 
             case WRITE_REQUEST:
-                // Захватываем мьютекс записи
                 WaitForSingleObject(recordMutexes[index], INFINITE);
 
-                // Захватываем глобальный мьютекс для проверки состояния
                 WaitForSingleObject(globalMutex, INFINITE);
 
                 if (recordLocked[index] || readCount[index] > 0) {
@@ -140,10 +137,8 @@ void handleClientRequest(HANDLE hPipe) {
 
                     WriteFile(hPipe, &response, sizeof(Response), &bytesWritten, NULL);
 
-                    // Ждем модифицированные данные
                     ReadFile(hPipe, &request, sizeof(Request), &bytesRead, NULL);
 
-                    // Снова захватываем глобальный мьютекс для обновления данных
                     WaitForSingleObject(globalMutex, INFINITE);
                     employees[index] = request.data;
                     recordLocked[index] = false;
@@ -176,7 +171,6 @@ void handleClientRequest(HANDLE hPipe) {
             }
         }
         else {
-            // Сотрудник не найден
             WriteFile(hPipe, &response, sizeof(Response), &bytesWritten, NULL);
         }
     }
@@ -223,12 +217,10 @@ void serverLoop() {
     std::cout << "Введите количество клиентов: ";
     std::cin >> clientCount;
 
-    // Создаем и запускаем клиентские процессы
     for (int i = 0; i < clientCount; i++) {
         startClientProcess();
     }
 
-    // Создаем именованный канал
     HANDLE hPipe;
     HANDLE* hThreads = new HANDLE[clientCount];
     int threadCount = 0;
@@ -275,91 +267,24 @@ void serverLoop() {
         }
     }
 
-    // Ожидаем завершения всех потоков
     WaitForMultipleObjects(threadCount, hThreads, TRUE, INFINITE);
 
-    // Освобождаем ресурсы
     for (int i = 0; i < threadCount; i++) {
         CloseHandle(hThreads[i]);
     }
     delete[] hThreads;
 }
 
-#ifdef TEST_BUILD
-
-// Helper function to set up global server state for testing
-// This replicates parts of createBinaryFile's initialization logic without file I/O or console I/O.
-void server_test_setup(const std::vector<Employee>& initial_employees_data) {
-    filename = "test_employee_file.bin"; // Use a dedicated test file name
-    employees = initial_employees_data;
-    size_t count = employees.size();
-
-    recordLocked.assign(count, false);
-    readCount.assign(count, 0);
-
-    // Clean up any previous mutexes if tests are run sequentially in one instance
-    for (HANDLE& mutex_handle : recordMutexes) {
-        if (mutex_handle != NULL) {
-            CloseHandle(mutex_handle);
-            mutex_handle = NULL;
-        }
-    }
-    recordMutexes.clear(); // Clear the vector of handles
-
-    if (globalMutex != NULL) {
-        CloseHandle(globalMutex);
-        globalMutex = NULL;
-    }
-
-    recordMutexes.resize(count);
-    for (size_t i = 0; i < count; ++i) {
-        recordMutexes[i] = CreateMutex(NULL, FALSE, NULL);
-        // In a real test, you might want to ASSERT_NE(nullptr, recordMutexes[i]) here
-        // but this code is part of the source, not the test itself.
-    }
-    globalMutex = CreateMutex(NULL, FALSE, NULL);
-    // ASSERT_NE(nullptr, globalMutex);
-}
-
-// Helper function to clean up global server state after testing
-void server_test_teardown() {
-    for (HANDLE& mutex_handle : recordMutexes) {
-        if (mutex_handle != NULL) {
-            CloseHandle(mutex_handle);
-            mutex_handle = NULL;
-        }
-    }
-    recordMutexes.clear();
-
-    if (globalMutex != NULL) {
-        CloseHandle(globalMutex);
-        globalMutex = NULL;
-    }
-
-    employees.clear();
-    recordLocked.clear();
-    readCount.clear();
-
-    // remove(filename.c_str()); // Optionally delete the test file
-}
-
-#endif // TEST_BUILD
-
-#ifndef TEST_BUILD
 
 int main() {
     setlocale(LC_ALL, "Russian");
 
-    // Создаем бинарный файл
     createBinaryFile();
 
-    // Выводим содержимое файла
     displayFile();
 
-    // Запускаем основной цикл сервера
     serverLoop();
 
-    // После завершения клиентов показываем обновленный файл
     displayFile();
 
     std::cout << "Нажмите Enter для завершения...";
@@ -373,4 +298,3 @@ int main() {
 
     return 0;
 }
-#endif
